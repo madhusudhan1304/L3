@@ -70,7 +70,7 @@ todos_.add({ title: "Submit assignment", dueDate: yesterday, completed: false })
 todos_.add({ title: "Pay rent", dueDate: today, completed: true });
 todos_.add({ title: "Service Vehicle", dueDate: today, completed: false });
 todos_.add({ title: "File taxes", dueDate: tomorrow, completed: false });
-todos_e.log("My Todo-list\n\n");
+todos_.log("My Todo-list\n\n");
 
 console.log("Overdue");
 var overdues = todos_.overdue();
