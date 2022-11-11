@@ -1,4 +1,4 @@
-const todoL = () => {
+const todoList = () => {
   all = [];
   const add = (todoItem) => {
     all.push(todoItem);
@@ -49,9 +49,11 @@ const todoL = () => {
   };
 };
 
+// ####################################### #
+// DO NOT CHANGE ANYTHING BELOW THIS LINE. #
+// ####################################### #
 
-
-const todos_ = todoL();
+const todos = todoList();
 
 const formattedDate = (d) => {
   return d.toISOString().split("T")[0];
@@ -66,26 +68,28 @@ const tomorrow = formattedDate(
   new Date(new Date().setDate(dateToday.getDate() + 1))
 );
 
-todos_.add({ title: "Submit assignment", dueDate: yesterday, completed: false });
-todos_.add({ title: "Pay rent", dueDate: today, completed: true });
-todos_.add({ title: "Service Vehicle", dueDate: today, completed: false });
-todos_.add({ title: "File taxes", dueDate: tomorrow, completed: false });
-todos_.log("My Todo-list\n\n");
+todos.add({ title: "Submit assignment", dueDate: yesterday, completed: false });
+todos.add({ title: "Pay rent", dueDate: today, completed: true });
+todos.add({ title: "Service Vehicle", dueDate: today, completed: false });
+todos.add({ title: "File taxes", dueDate: tomorrow, completed: false });
+todos.add({ title: "Pay electric bill", dueDate: tomorrow, completed: false });
+
+console.log("My Todo-list\n\n");
 
 console.log("Overdue");
-var overdues = todos_.overdue();
-var formattedOverdues = todos_.toDisplayableList(overdues);
+var overdues = todos.overdue();
+var formattedOverdues = todos.toDisplayableList(overdues);
 console.log(formattedOverdues);
 console.log("\n\n");
 
 console.log("Due Today");
-let itemsDueToday = todos_.dueToday();
-let formattedItemsDueToday = todos_.toDisplayableList(itemsDueToday);
+let itemsDueToday = todos.dueToday();
+let formattedItemsDueToday = todos.toDisplayableList(itemsDueToday);
 console.log(formattedItemsDueToday);
 console.log("\n\n");
 
 console.log("Due Later");
-let itemsDueLater = todos_.dueLater();
-let formattedItemsDueLater = todos_.toDisplayableList(itemsDueLater);
+let itemsDueLater = todos.dueLater();
+let formattedItemsDueLater = todos.toDisplayableList(itemsDueLater);
 console.log(formattedItemsDueLater);
 console.log("\n\n");
